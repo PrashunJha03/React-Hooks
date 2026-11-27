@@ -1,5 +1,4 @@
 import React, { createContext, useContext } from 'react';
-
 // 1. Create a Context object outside the component
 const UserContext = createContext();
 
@@ -12,10 +11,14 @@ function UseContext() {
     <UserContext.Provider value={{ fname, lname }}>
       <div style={{ padding: "15px", border: "2px solid #007bff", margin: "10px", borderRadius: "8px" }}>
         <h1>UseContext Example</h1>
+        
         <h3>1. Parent Component (Provider)</h3>
+        
         <p>Providing Data globally: <strong>{fname} - {lname}</strong></p>
         <hr />
+        
         <ChildA />
+      
       </div>
     </UserContext.Provider>
   );
